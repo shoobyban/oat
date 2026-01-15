@@ -67,7 +67,7 @@
     --lm-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --lm-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 
-    --lm-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --lm-transition-fast: 120ms cubic-bezier(0.4, 0, 0.2, 1);
     --lm-transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
 
     --lm-z-dropdown: 50;
