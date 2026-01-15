@@ -1,22 +1,22 @@
 /**
- * LongTerm UI - Toast Component
+ * lmui - Toast Component
  * Auto-dismissing notifications.
  *
  * Usage:
- * <lt-toast-container></lt-toast-container>
+ * <lm-toast-container></lm-toast-container>
  *
  * // Programmatic:
- * const container = document.querySelector('lt-toast-container');
+ * const container = document.querySelector('lm-toast-container');
  * container.show({ message: 'Saved!', variant: 'success' });
  *
  * // Or declarative:
- * <lt-toast visible duration="5000">
+ * <lm-toast visible duration="5000">
  *   <span>Message here</span>
  *   <button data-close>×</button>
- * </lt-toast>
+ * </lm-toast>
  */
 
-class LTToast extends LTBase {
+class LMToast extends LMBase {
   #duration = 5000;
   #timeout = null;
 
@@ -59,7 +59,7 @@ class LTToast extends LTBase {
   show() {
     this.setAttribute('data-state', 'open');
     this.hidden = false;
-    this.emit('lt-toast-open');
+    this.emit('lm-toast-open');
 
     // Auto-dismiss
     if (this.#duration > 0) {
@@ -72,11 +72,11 @@ class LTToast extends LTBase {
     this.#clearTimeout();
     this.setAttribute('data-state', 'closing');
     this.removeAttribute('visible');
-    this.emit('lt-toast-close');
+    this.emit('lm-toast-close');
 
     // Remove from DOM after animation
     setTimeout(() => {
-      if (this.parentElement?.tagName === 'LT-TOAST-CONTAINER') {
+      if (this.parentElement?.tagName === 'LM-TOAST-CONTAINER') {
         this.remove();
       } else {
         this.hidden = true;
@@ -96,23 +96,23 @@ class LTToast extends LTBase {
   }
 }
 
-customElements.define('lt-toast', LTToast);
+customElements.define('lm-toast', LMToast);
 
 
 /**
  * Toast Container - Manages multiple toasts
  */
-class LTToastContainer extends LTBase {
+class LMToastContainer extends LMBase {
   /**
    * Show a toast notification.
    * @param {Object} options
    * @param {string} options.message - Toast message
    * @param {string} [options.variant] - 'success' | 'error' | 'warning'
    * @param {number} [options.duration] - Duration in ms (0 = no auto-dismiss)
-   * @returns {LTToast}
+   * @returns {LMToast}
    */
   show({ message, variant = '', duration = 5000 }) {
-    const toast = document.createElement('lt-toast');
+    const toast = document.createElement('lm-toast');
     toast.setAttribute('duration', String(duration));
     if (variant) {
       toast.setAttribute('data-variant', variant);
@@ -139,8 +139,8 @@ class LTToastContainer extends LTBase {
    * Close all toasts.
    */
   clear() {
-    this.$$('lt-toast').forEach(toast => toast.close());
+    this.$$('lm-toast').forEach(toast => toast.close());
   }
 }
 
-customElements.define('lt-toast-container', LTToastContainer);
+customElements.define('lm-toast-container', LMToastContainer);

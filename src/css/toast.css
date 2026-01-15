@@ -1,36 +1,36 @@
 @layer components {
-  lt-toast, .toast {
+  lm-toast, .toast {
     display: flex;
     align-items: flex-start;
-    gap: var(--lt-space-3);
-    padding: var(--lt-space-4);
-    background-color: var(--lt-background);
-    color: var(--lt-foreground);
-    border: 1px solid var(--lt-border);
-    border-radius: var(--lt-radius);
-    box-shadow: var(--lt-shadow-lg);
+    gap: var(--lm-space-3);
+    padding: var(--lm-space-4);
+    background-color: var(--lm-background);
+    color: var(--lm-foreground);
+    border: 1px solid var(--lm-border);
+    border-radius: var(--lm-radius);
+    box-shadow: var(--lm-shadow-lg);
     max-width: 24rem;
 
     &[data-variant="success"] {
-      border-color: var(--lt-success);
+      border-color: var(--lm-success);
     }
 
     &[data-variant="error"], &[data-variant="destructive"] {
-      border-color: var(--lt-destructive);
+      border-color: var(--lm-destructive);
     }
 
     &[data-variant="warning"] {
-      border-color: var(--lt-warning);
+      border-color: var(--lm-warning);
     }
   }
 
-  lt-toast-container, .toast-container {
+  lm-toast-container, .toast-container {
     position: fixed;
-    bottom: var(--lt-space-4);
-    right: var(--lt-space-4);
-    z-index: var(--lt-z-toast);
+    bottom: var(--lm-space-4);
+    right: var(--lm-space-4);
+    z-index: var(--lm-z-toast);
     display: flex;
     flex-direction: column;
-    gap: var(--lt-space-2);
+    gap: var(--lm-space-2);
   }
 }

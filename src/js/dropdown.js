@@ -1,18 +1,18 @@
 /**
- * LongTerm UI - Dropdown Component
+ * lmui - Dropdown Component
  * Menu with keyboard navigation.
  *
  * Usage:
- * <lt-dropdown>
+ * <lm-dropdown>
  *   <button data-trigger>Options</button>
  *   <div data-dropdown-menu hidden>
  *     <button data-dropdown-item data-value="edit">Edit</button>
  *     <button data-dropdown-item data-value="delete">Delete</button>
  *   </div>
- * </lt-dropdown>
+ * </lm-dropdown>
  */
 
-class LTDropdown extends LTBase {
+class LMDropdown extends LMBase {
   #trigger = null;
   #menu = null;
   #items = [];
@@ -24,14 +24,14 @@ class LTDropdown extends LTBase {
     this.#menu = this.$('[data-dropdown-menu]');
 
     if (!this.#trigger || !this.#menu) {
-      console.warn('lt-dropdown: Missing trigger or menu element');
+      console.warn('lm-dropdown: Missing trigger or menu element');
       return;
     }
 
     this.#items = this.$$('[data-dropdown-item]');
 
     // Set up ARIA
-    const menuId = this.#menu.id || `lt-menu-${this.uid()}`;
+    const menuId = this.#menu.id || `lm-menu-${this.uid()}`;
     this.#menu.id = menuId;
     this.#trigger.setAttribute('aria-haspopup', 'true');
     this.#trigger.setAttribute('aria-expanded', 'false');
@@ -80,7 +80,7 @@ class LTDropdown extends LTBase {
     // Item click
     const item = target.closest('[data-dropdown-item]');
     if (item && this.#menu.contains(item)) {
-      this.emit('lt-dropdown-select', {
+      this.emit('lm-dropdown-select', {
         item,
         value: item.dataset.value
       });
@@ -151,7 +151,7 @@ class LTDropdown extends LTBase {
     this.#menu.hidden = false;
     this.#trigger.setAttribute('aria-expanded', 'true');
     this.setAttribute('data-state', 'open');
-    this.emit('lt-dropdown-open');
+    this.emit('lm-dropdown-open');
   }
 
   close() {
@@ -160,7 +160,7 @@ class LTDropdown extends LTBase {
     this.#menu.hidden = true;
     this.#trigger.setAttribute('aria-expanded', 'false');
     this.setAttribute('data-state', 'closed');
-    this.emit('lt-dropdown-close');
+    this.emit('lm-dropdown-close');
   }
 
   toggle() {
@@ -172,4 +172,4 @@ class LTDropdown extends LTBase {
   }
 }
 
-customElements.define('lt-dropdown', LTDropdown);
+customElements.define('lm-dropdown', LMDropdown);

@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LongTerm UI - Component Library</title>
+  <title>lmui - Component Library</title>
   <link rel="stylesheet" href="../dist/longterm.css">
   <script src="../dist/longterm.js" defer></script>
   <script src="main.js" defer></script>
   <style>
     /* Demo-specific styles */
     .demo-section {
-      margin-bottom: var(--lt-space-18);
-      padding-bottom: var(--lt-space-8);
-      border-bottom: 1px solid var(--lt-border);
+      margin-bottom: var(--lm-space-18);
+      padding-bottom: var(--lm-space-8);
+      border-bottom: 1px solid var(--lm-border);
     }
 
     .demo-section:last-child {
@@ -23,15 +23,21 @@
     .demo-row {
       display: flex;
       flex-wrap: wrap;
-      gap: var(--lt-space-4);
+      gap: var(--lm-space-4);
       align-items: center;
-      margin-bottom: var(--lt-space-4);
+      margin-bottom: var(--lm-space-4);
     }
 
     .demo-grid {
       display: grid;
-      gap: var(--lt-space-4);
+      gap: var(--lm-space-4);
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    @layer components {
+      .container {
+        max-width: 900px;
+      }
     }
   </style>
 </head>
@@ -39,7 +45,7 @@
 <body>
   <!-- Navigation Sidebar -->
   <aside class="sidebar">
-    <h4 style="margin-bottom: var(--lt-space-4);">LongTerm UI</h4>
+    <h4 style="margin-bottom: var(--lm-space-4);">lmui</h4>
     <nav>
       <details open>
         <summary>
@@ -70,35 +76,29 @@
         </div>
       </details>
     </nav>
-    <div style="margin-top: auto; padding-top: var(--lt-space-4);">
+    <div style="margin-top: auto; padding-top: var(--lm-space-4);">
       <button class="outline sm" style="width: 100%;" onclick="toggleTheme()">Toggle Dark Mode</button>
     </div>
   </aside>
 
   <!-- Main Content -->
   <div class="sidebar-content">
-    <div class="container" style="padding: var(--lt-space-8) var(--lt-space-4);">
-      <h1>LongTerm UI</h1>
+    <div class="container" style="padding: var(--lm-space-8) var(--lm-space-4);">
+      <h1>lmui</h1>
       <p>
-        A minimal, semantic-first UI component library with zero external dependencies. HTML native tags are styled by
-        default
-        without needing any classes. Dynamic components like dialogs and dropdown use WebComponents.
+        lmui (Literally My-own UI) is a minimal, semantic-first UI component library with zero external dependencies. HTML native tags are styled by default without needing any classes. Dynamic components like dialogs and dropdown use WebComponents.
       </p>
       <p>
-        I was sick of getting rug-pulled and vendor-version-locked in by Javascript frameworks, UI-frameworks with
-        numerous dependencies,
-        endeming to the Javascript ecosystem. I want a vanilla HTML+CSS+JS UI library that I can maintain and use across
-        my
-        projects over the long term without being beholden to what is fashionable at the moment. So literally, LongTerm
-        UI.
+        I was sick of getting rug-pulled and vendor-version-locked in by Javascript frameworks and UI-libraries with
+        numerous dependencies, endemic to the Javascript ecosystem. Not to mention, the ridiculous bloat.
+
+        I want a vanilla HTML+CSS+JS UI library that I can maintain and use across my projects over the long term without being beholden to what is fashionable at the moment. So, like everyobody else, I rolled my own, yet another UI lib.
         My primary usecase is server-side rendered web applications.
       </p>
       <p>
-        This lib has been created with heavy LLM assistance and has a shadcn-ui-like aesthetic with no external
-        dependencies.
+        This lib has been created with heavy LLM assistance and has a shadcn-ui-like aesthetic with zero external dependencies.
         I don't intend to maintain this to compete with any other framework, nor take feature requests. It's for my own
-        use
-        (and of course anyone else who finds it useful as-is).
+        use (and of course anyone else who finds it useful as-is).
       </p>
 
       <hr /><br /><br />
@@ -314,15 +314,15 @@
         <h2>Alerts</h2>
         <p>Use <code>role="alert"</code> for accessible alerts.</p>
 
-        <div role="alert" style="margin-bottom: var(--lt-space-4);">
+        <div role="alert" style="margin-bottom: var(--lm-space-4);">
           <strong>Default Alert</strong> - This is a default alert message.
         </div>
 
-        <div role="alert" data-variant="success" style="margin-bottom: var(--lt-space-4);">
+        <div role="alert" data-variant="success" style="margin-bottom: var(--lm-space-4);">
           <strong>Success!</strong> - Your changes have been saved.
         </div>
 
-        <div role="alert" data-variant="warning" style="margin-bottom: var(--lt-space-4);">
+        <div role="alert" data-variant="warning" style="margin-bottom: var(--lm-space-4);">
           <strong>Warning!</strong> - Please review before continuing.
         </div>
 
@@ -351,8 +351,8 @@
         <h2>Progress & Spinner</h2>
 
         <h3>Progress Bar</h3>
-        <progress value="60" max="100" style="margin-bottom: var(--lt-space-4);"></progress>
-        <progress value="30" max="100" style="margin-bottom: var(--lt-space-4);"></progress>
+        <progress value="60" max="100" style="margin-bottom: var(--lm-space-4);"></progress>
+        <progress value="30" max="100" style="margin-bottom: var(--lm-space-4);"></progress>
         <progress value="90" max="100"></progress>
 
         <h3>Spinner</h3>
@@ -369,8 +369,8 @@
         <p>Uses native <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code>.</p>
 
         <details>
-          <summary>What is LongTerm UI?</summary>
-          <p>LongTerm UI is a minimal, semantic-first UI component library with zero dependencies. It uses modern CSS
+          <summary>What is lmui?</summary>
+          <p>lmui is a minimal, semantic-first UI component library with zero dependencies. It uses modern CSS
             features like cascade layers, container queries, and CSS custom properties.</p>
         </details>
 
@@ -382,7 +382,7 @@
 
         <details>
           <summary>Is it accessible?</summary>
-          <p>Yes! LongTerm UI prioritizes semantic HTML and ARIA attributes for accessibility. Keyboard navigation is
+          <p>Yes! lmui prioritizes semantic HTML and ARIA attributes for accessibility. Keyboard navigation is
             fully supported.</p>
         </details>
       </section>
@@ -390,9 +390,9 @@
       <!-- Tabs -->
       <section id="tabs" class="demo-section">
         <h2>Tabs</h2>
-        <p>Use ARIA roles for tabs. The <code>&lt;lt-tabs&gt;</code> component handles keyboard navigation.</p>
+        <p>Use ARIA roles for tabs. The <code>&lt;lm-tabs&gt;</code> component handles keyboard navigation.</p>
 
-        <lt-tabs>
+        <lm-tabs>
           <div role="tablist">
             <button role="tab">Account</button>
             <button role="tab">Password</button>
@@ -410,7 +410,7 @@
             <h3>Notification Settings</h3>
             <p>Configure your notification preferences.</p>
           </div>
-        </lt-tabs>
+        </lm-tabs>
       </section>
 
       <!-- Dialog -->
@@ -418,7 +418,7 @@
         <h2>Dialog</h2>
         <p>Uses native <code>&lt;dialog&gt;</code> element with trigger handling.</p>
 
-        <lt-dialog>
+        <lm-dialog>
           <button data-trigger>Open Dialog</button>
           <dialog>
             <header>
@@ -434,7 +434,7 @@
               <button data-close>Confirm</button>
             </footer>
           </dialog>
-        </lt-dialog>
+        </lm-dialog>
       </section>
 
       <!-- Dropdown -->
@@ -442,9 +442,9 @@
         <h2>Dropdown</h2>
         <p>Menu with keyboard navigation.</p>
 
-        <lt-demo>
+        <lm-demo>
           <template>
-            <lt-dropdown>
+            <lm-dropdown>
               <button data-trigger class="outline">
                 Options
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6" /></svg>
@@ -462,15 +462,15 @@
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><path d="M9 9a3 3 0 115 2.83c-.83.5-2 1.17-2 2.17m0 4h.01" /></svg>
                   Help
                 </button>
-                <hr style="margin: var(--lt-space-1) 0;">
+                <hr style="margin: var(--lm-space-1) 0;">
                 <button data-dropdown-item data-value="logout">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4m7 14l5-5-5-5m5 5H9" /></svg>
                   Logout
                 </button>
               </div>
-            </lt-dropdown>
+            </lm-dropdown>
           </template>
-        </lt-demo>
+        </lm-demo>
       </section>
 
       <!-- Toast -->
@@ -492,9 +492,9 @@
         <p>Fixed sidebar with collapsible navigation sections. (This page uses one!)</p>
 
         <div
-          style="position: relative; height: 400px; border: 1px solid var(--lt-border); border-radius: var(--lt-radius); overflow: hidden;">
+          style="position: relative; height: 400px; border: 1px solid var(--lm-border); border-radius: var(--lm-radius); overflow: hidden;">
           <aside class="sidebar" style="position: absolute;">
-            <h4 style="margin-bottom: var(--lt-space-4);">Dashboard</h4>
+            <h4 style="margin-bottom: var(--lm-space-4);">Dashboard</h4>
             <nav>
               <a href="#" aria-current="page">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -526,7 +526,7 @@
               </details>
             </nav>
           </aside>
-          <div class="sidebar-content" style="padding: var(--lt-space-4);">
+          <div class="sidebar-content" style="padding: var(--lm-space-4);">
             <h3>Main Content</h3>
             <p>This area shifts to make room for the sidebar.</p>
           </div>
@@ -539,18 +539,18 @@
         <p>12-column grid with container query breakpoints.</p>
 
         <div class="container"
-          style="background: var(--lt-muted); padding: var(--lt-space-4); border-radius: var(--lt-radius);">
+          style="background: var(--lm-muted); padding: var(--lm-space-4); border-radius: var(--lm-radius);">
           <div class="row">
             <div class="col col-12 col-md-6 col-lg-4"
-              style="background: var(--lt-primary); color: var(--lt-primary-foreground); padding: var(--lt-space-4); border-radius: var(--lt-radius);">
+              style="background: var(--lm-primary); color: var(--lm-primary-foreground); padding: var(--lm-space-4); border-radius: var(--lm-radius);">
               col-12 col-md-6 col-lg-4
             </div>
             <div class="col col-12 col-md-6 col-lg-4"
-              style="background: var(--lt-primary); color: var(--lt-primary-foreground); padding: var(--lt-space-4); border-radius: var(--lt-radius);">
+              style="background: var(--lm-primary); color: var(--lm-primary-foreground); padding: var(--lm-space-4); border-radius: var(--lm-radius);">
               col-12 col-md-6 col-lg-4
             </div>
             <div class="col col-12 col-lg-4"
-              style="background: var(--lt-primary); color: var(--lt-primary-foreground); padding: var(--lt-space-4); border-radius: var(--lt-radius);">
+              style="background: var(--lm-primary); color: var(--lm-primary-foreground); padding: var(--lm-space-4); border-radius: var(--lm-radius);">
               col-12 col-lg-4
             </div>
           </div>
@@ -561,7 +561,7 @@
   </div>
 
   <!-- Toast Container -->
-  <lt-toast-container></lt-toast-container>
+  <lm-toast-container></lm-toast-container>
 
   <script>
     // Theme toggle
@@ -573,7 +573,7 @@
 
     // Toast demo
     function showToast(variant) {
-      const container = document.querySelector('lt-toast-container');
+      const container = document.querySelector('lm-toast-container');
       const messages = {
         default: 'This is a default notification.',
         success: 'Your changes have been saved!',
@@ -587,7 +587,7 @@
     }
 
     // Log dropdown selections
-    document.querySelector('lt-dropdown').addEventListener('lt-dropdown-select', (e) => {
+    document.querySelector('lm-dropdown').addEventListener('lm-dropdown-select', (e) => {
       console.log('Selected:', e.detail.value);
     });
   </script>

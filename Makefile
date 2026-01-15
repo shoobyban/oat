@@ -1,4 +1,4 @@
-# LongTerm UI - Build System
+# lmui - Build System
 # Requires: esbuild
 
 .PHONY: dist css js clean size

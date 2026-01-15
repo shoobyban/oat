@@ -1,17 +1,17 @@
 @layer base {
   label {
     display: block;
-    font-size: var(--lt-text-sm);
-    font-weight: var(--lt-font-medium);
-    margin-bottom: var(--lt-space-2);
+    font-size: var(--lm-text-sm);
+    font-weight: var(--lm-font-medium);
+    margin-bottom: var(--lm-space-2);
 
     &:has(input:not([type="checkbox"]):not([type="radio"])),
     &:has(textarea),
     &:has(select) {
-      margin-bottom: var(--lt-space-4);
+      margin-bottom: var(--lm-space-4);
 
       input, textarea, select {
-        margin-top: var(--lt-space-2);
+        margin-top: var(--lm-space-2);
       }
     }
 
@@ -19,8 +19,8 @@
     &:has(input[type="radio"]) {
       display: inline-flex;
       align-items: center;
-      gap: var(--lt-space-2);
-      font-weight: var(--lt-font-normal);
+      gap: var(--lm-space-2);
+      font-weight: var(--lm-font-normal);
       cursor: pointer;
     }
   }
@@ -31,36 +31,36 @@
     display: block;
     width: 100%;
     height: 2.5rem;
-    padding: 0 var(--lt-space-3);
-    font-size: var(--lt-text-sm);
-    line-height: var(--lt-leading-normal);
-    background-color: var(--lt-background);
-    color: var(--lt-foreground);
-    border: 1px solid var(--lt-input);
-    border-radius: var(--lt-radius);
-    transition: border-color var(--lt-transition-fast), box-shadow var(--lt-transition-fast);
+    padding: 0 var(--lm-space-3);
+    font-size: var(--lm-text-sm);
+    line-height: var(--lm-leading-normal);
+    background-color: var(--lm-background);
+    color: var(--lm-foreground);
+    border: 1px solid var(--lm-input);
+    border-radius: var(--lm-radius);
+    transition: border-color var(--lm-transition-fast), box-shadow var(--lm-transition-fast);
 
     &::placeholder {
-      color: var(--lt-muted-foreground);
+      color: var(--lm-muted-foreground);
     }
 
     &:focus {
       outline: none;
-      border-color: var(--lt-ring);
-      box-shadow: 0 0 0 2px rgb(from var(--lt-ring) r g b / 0.2);
+      border-color: var(--lm-ring);
+      box-shadow: 0 0 0 2px rgb(from var(--lm-ring) r g b / 0.2);
     }
 
     &:disabled {
       opacity: 0.5;
       cursor: not-allowed;
-      background-color: var(--lt-muted);
+      background-color: var(--lm-muted);
     }
 
     &[aria-invalid="true"], &:user-invalid {
-      border-color: var(--lt-destructive);
+      border-color: var(--lm-destructive);
 
       &:focus {
-        box-shadow: 0 0 0 2px rgb(from var(--lt-destructive) r g b / 0.2);
+        box-shadow: 0 0 0 2px rgb(from var(--lm-destructive) r g b / 0.2);
       }
     }
   }
@@ -68,7 +68,7 @@
   textarea {
     height: auto;
     min-height: 5rem;
-    padding: var(--lt-space-3);
+    padding: var(--lm-space-3);
     resize: vertical;
   }
 
@@ -76,8 +76,8 @@
     appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2371717a' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-position: right var(--lt-space-3) center;
-    padding-right: var(--lt-space-10);
+    background-position: right var(--lm-space-3) center;
+    padding-right: var(--lm-space-10);
   }
 
   input[type="checkbox"], input[type="radio"] {
@@ -85,19 +85,19 @@
     width: 1rem;
     height: 1rem;
     margin: 0;
-    background-color: var(--lt-background);
-    border: 1px solid var(--lt-input);
+    background-color: var(--lm-background);
+    border: 1px solid var(--lm-input);
     cursor: pointer;
-    transition: background-color var(--lt-transition-fast), border-color var(--lt-transition-fast);
+    transition: background-color var(--lm-transition-fast), border-color var(--lm-transition-fast);
 
     &:focus-visible {
-      outline: 2px solid var(--lt-ring);
+      outline: 2px solid var(--lm-ring);
       outline-offset: 2px;
     }
 
     &:checked {
-      background-color: var(--lt-primary);
-      border-color: var(--lt-primary);
+      background-color: var(--lm-primary);
+      border-color: var(--lm-primary);
     }
 
     &:disabled {
@@ -115,7 +115,7 @@
   }
 
   input[type="checkbox"] {
-    border-radius: var(--lt-radius-sm);
+    border-radius: var(--lm-radius-sm);
 
     &:checked {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
@@ -124,7 +124,7 @@
   }
 
   input[type="radio"] {
-    border-radius: var(--lt-radius-full);
+    border-radius: var(--lm-radius-full);
 
     &:checked {
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='4' fill='white'/%3E%3C/svg%3E");
@@ -136,18 +136,18 @@
     width: 100%;
     height: 0.5rem;
     appearance: none;
-    background: var(--lt-muted);
-    border-radius: var(--lt-radius-full);
+    background: var(--lm-muted);
+    border-radius: var(--lm-radius-full);
     cursor: pointer;
 
     &::-webkit-slider-thumb {
       appearance: none;
       width: 1.25rem;
       height: 1.25rem;
-      background: var(--lt-primary);
-      border-radius: var(--lt-radius-full);
+      background: var(--lm-primary);
+      border-radius: var(--lm-radius-full);
       cursor: pointer;
-      transition: transform var(--lt-transition-fast);
+      transition: transform var(--lm-transition-fast);
 
       &:hover {
         transform: scale(1.1);
@@ -157,24 +157,24 @@
     &::-moz-range-thumb {
       width: 1.25rem;
       height: 1.25rem;
-      background: var(--lt-primary);
+      background: var(--lm-primary);
       border: none;
-      border-radius: var(--lt-radius-full);
+      border-radius: var(--lm-radius-full);
       cursor: pointer;
     }
   }
 
   fieldset {
-    border: 1px solid var(--lt-border);
-    border-radius: var(--lt-radius);
-    padding: var(--lt-space-4);
-    margin-bottom: var(--lt-space-4);
+    border: 1px solid var(--lm-border);
+    border-radius: var(--lm-radius);
+    padding: var(--lm-space-4);
+    margin-bottom: var(--lm-space-4);
   }
 
   legend {
-    font-size: var(--lt-text-sm);
-    font-weight: var(--lt-font-medium);
-    padding: 0 var(--lt-space-2);
+    font-size: var(--lm-text-sm);
+    font-weight: var(--lm-font-medium);
+    padding: 0 var(--lm-space-2);
   }
 }
 
@@ -187,13 +187,13 @@
       border-radius: 0;
 
       &:first-child {
-        border-top-left-radius: var(--lt-radius);
-        border-bottom-left-radius: var(--lt-radius);
+        border-top-left-radius: var(--lm-radius);
+        border-bottom-left-radius: var(--lm-radius);
       }
 
       &:last-child {
-        border-top-right-radius: var(--lt-radius);
-        border-bottom-right-radius: var(--lt-radius);
+        border-top-right-radius: var(--lm-radius);
+        border-bottom-right-radius: var(--lm-radius);
       }
     }
 
@@ -204,11 +204,11 @@
     & > span, & > .prefix, & > .suffix {
       display: flex;
       align-items: center;
-      padding: 0 var(--lt-space-3);
-      font-size: var(--lt-text-sm);
-      color: var(--lt-muted-foreground);
-      background-color: var(--lt-muted);
-      border: 1px solid var(--lt-input);
+      padding: 0 var(--lm-space-3);
+      font-size: var(--lm-text-sm);
+      color: var(--lm-muted-foreground);
+      background-color: var(--lm-muted);
+      border: 1px solid var(--lm-input);
 
       &:first-child {
         border-right: none;
@@ -221,24 +221,24 @@
   }
 
   .field {
-    margin-bottom: var(--lt-space-4);
+    margin-bottom: var(--lm-space-4);
 
     & > label {
-      margin-bottom: var(--lt-space-2);
+      margin-bottom: var(--lm-space-2);
     }
 
     & > .error, & > [data-error],
     & > .hint, & > [data-hint] {
-      font-size: var(--lt-text-sm);
-      margin-top: var(--lt-space-1);
+      font-size: var(--lm-text-sm);
+      margin-top: var(--lm-space-1);
     }
 
     & > .error, & > [data-error] {
-      color: var(--lt-destructive);
+      color: var(--lm-destructive);
     }
 
     & > .hint, & > [data-hint] {
-      color: var(--lt-muted-foreground);
+      color: var(--lm-muted-foreground);
     }
   }
 }

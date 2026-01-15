@@ -4,24 +4,24 @@
     width: 100%;
     height: 0.5rem;
     border: none;
-    border-radius: var(--lt-radius-full);
+    border-radius: var(--lm-radius-full);
     overflow: hidden;
-    background-color: var(--lt-muted);
+    background-color: var(--lm-muted);
 
     &::-webkit-progress-bar {
-      background-color: var(--lt-muted);
-      border-radius: var(--lt-radius-full);
+      background-color: var(--lm-muted);
+      border-radius: var(--lm-radius-full);
     }
 
     &::-webkit-progress-value {
-      background-color: var(--lt-primary);
-      border-radius: var(--lt-radius-full);
-      transition: width var(--lt-transition);
+      background-color: var(--lm-primary);
+      border-radius: var(--lm-radius-full);
+      transition: width var(--lm-transition);
     }
 
     &::-moz-progress-bar {
-      background-color: var(--lt-primary);
-      border-radius: var(--lt-radius-full);
+      background-color: var(--lm-primary);
+      border-radius: var(--lm-radius-full);
     }
   }
 }
@@ -30,10 +30,10 @@
   .spinner {
     width: 1.5rem;
     height: 1.5rem;
-    border: 2px solid var(--lt-muted);
-    border-top-color: var(--lt-primary);
-    border-radius: var(--lt-radius-full);
-    animation: lt-spin 0.6s linear infinite;
+    border: 2px solid var(--lm-muted);
+    border-top-color: var(--lm-primary);
+    border-radius: var(--lm-radius-full);
+    animation: lm-spin 0.6s linear infinite;
 
     &.sm {
       width: 1rem;
@@ -47,7 +47,7 @@
     }
   }
 
-  @keyframes lt-spin {
+  @keyframes lm-spin {
     to {
       transform: rotate(360deg);
     }

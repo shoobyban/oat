@@ -2,39 +2,39 @@
   .badge {
     display: inline-flex;
     align-items: center;
-    gap: var(--lt-space-1);
-    padding: 0.125rem var(--lt-space-2);
-    font-size: var(--lt-text-xs);
-    font-weight: var(--lt-font-medium);
-    line-height: var(--lt-leading-normal);
-    background-color: var(--lt-primary);
-    color: var(--lt-primary-foreground);
-    border-radius: var(--lt-radius-full);
+    gap: var(--lm-space-1);
+    padding: 0.125rem var(--lm-space-2);
+    font-size: var(--lm-text-xs);
+    font-weight: var(--lm-font-medium);
+    line-height: var(--lm-leading-normal);
+    background-color: var(--lm-primary);
+    color: var(--lm-primary-foreground);
+    border-radius: var(--lm-radius-full);
 
     &.secondary {
-      background-color: var(--lt-secondary);
-      color: var(--lt-secondary-foreground);
+      background-color: var(--lm-secondary);
+      color: var(--lm-secondary-foreground);
     }
 
     &.outline {
       background-color: transparent;
-      color: var(--lt-foreground);
-      border: 1px solid var(--lt-border);
+      color: var(--lm-foreground);
+      border: 1px solid var(--lm-border);
     }
 
     &.destructive {
-      background-color: var(--lt-destructive);
-      color: var(--lt-destructive-foreground);
+      background-color: var(--lm-destructive);
+      color: var(--lm-destructive-foreground);
     }
 
     &.success {
-      background-color: var(--lt-success);
-      color: var(--lt-success-foreground);
+      background-color: var(--lm-success);
+      color: var(--lm-success-foreground);
     }
 
     &.warning {
-      background-color: var(--lt-warning);
-      color: var(--lt-warning-foreground);
+      background-color: var(--lm-warning);
+      color: var(--lm-warning-foreground);
     }
   }
 }

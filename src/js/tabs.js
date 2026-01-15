@@ -1,19 +1,19 @@
 /**
- * LongTerm UI - Tabs Component
+ * lmui - Tabs Component
  * Provides keyboard navigation and ARIA state management.
  *
  * Usage:
- * <lt-tabs>
+ * <lm-tabs>
  *   <div role="tablist">
  *     <button role="tab">Tab 1</button>
  *     <button role="tab">Tab 2</button>
  *   </div>
  *   <div role="tabpanel">Content 1</div>
  *   <div role="tabpanel">Content 2</div>
- * </lt-tabs>
+ * </lm-tabs>
  */
 
-class LTTabs extends LTBase {
+class LMTabs extends LMBase {
   #tabs = [];
   #panels = [];
   #activeIndex = 0;
@@ -23,7 +23,7 @@ class LTTabs extends LTBase {
     this.#panels = this.$$('[role="tabpanel"]');
 
     if (this.#tabs.length === 0 || this.#panels.length === 0) {
-      console.warn('lt-tabs: Missing tab or tabpanel elements');
+      console.warn('lm-tabs: Missing tab or tabpanel elements');
       return;
     }
 
@@ -32,8 +32,8 @@ class LTTabs extends LTBase {
       const panel = this.#panels[i];
       if (!panel) return;
 
-      const tabId = tab.id || `lt-tab-${this.uid()}`;
-      const panelId = panel.id || `lt-panel-${this.uid()}`;
+      const tabId = tab.id || `lm-tab-${this.uid()}`;
+      const panelId = panel.id || `lm-panel-${this.uid()}`;
 
       tab.id = tabId;
       panel.id = panelId;
@@ -107,7 +107,7 @@ class LTTabs extends LTBase {
     });
 
     this.#activeIndex = index;
-    this.emit('lt-tab-change', { index, tab: this.#tabs[index] });
+    this.emit('lm-tab-change', { index, tab: this.#tabs[index] });
   }
 
   get activeIndex() {
@@ -121,4 +121,4 @@ class LTTabs extends LTBase {
   }
 }
 
-customElements.define('lt-tabs', LTTabs);
+customElements.define('lm-tabs', LMTabs);

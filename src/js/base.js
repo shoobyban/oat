@@ -1,9 +1,9 @@
 /**
- * LongTerm UI - Base Web Component Class
+ * lmui - Base Web Component Class
  * Provides lifecycle management, event handling, and utilities.
  */
 
-class LTBase extends HTMLElement {
+class LMBase extends HTMLElement {
   #initialized = false;
 
   /**
@@ -122,5 +122,5 @@ class LTBase extends HTMLElement {
 
 // Export for use in other files
 if (typeof window !== 'undefined') {
-  window.LTBase = LTBase;
+  window.LMBase = LMBase;
 }

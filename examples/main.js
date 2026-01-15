@@ -2,23 +2,23 @@
  * Demo page utilities
  */
 
-class LTDemo extends LTBase {
+class LMDemo extends LMBase {
   init() {
     // Get pristine HTML from template (before any JS modifies it)
     const template = this.$('template');
     const rawHTML = template.innerHTML;
     const formattedHTML = this.formatHTML(rawHTML);
 
-    // Build tabs structure using lt-tabs
+    // Build tabs structure using lm-tabs
     this.innerHTML = `
-      <lt-tabs>
+      <lm-tabs>
         <div role="tablist">
           <button role="tab">Demo</button>
           <button role="tab">Code</button>
         </div>
         <div role="tabpanel"></div>
         <div role="tabpanel"><pre><code>${this.escapeHTML(formattedHTML)}</code></pre></div>
-      </lt-tabs>
+      </lm-tabs>
     `;
 
     // Clone template content into Demo panel (now components initialize fresh)
@@ -57,4 +57,4 @@ class LTDemo extends LTBase {
   }
 }
 
-customElements.define('lt-demo', LTDemo);
+customElements.define('lm-demo', LMDemo);

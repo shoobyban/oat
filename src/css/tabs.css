@@ -2,45 +2,45 @@
   [role="tablist"] {
     display: inline-flex;
     align-items: center;
-    gap: var(--lt-space-1);
-    padding: var(--lt-space-1);
-    background-color: var(--lt-muted);
-    border-radius: var(--lt-radius);
+    gap: var(--lm-space-1);
+    padding: var(--lm-space-1);
+    background-color: var(--lm-muted);
+    border-radius: var(--lm-radius);
   }
 
   [role="tab"] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: var(--lt-space-2) var(--lt-space-3);
-    font-size: var(--lt-text-sm);
-    font-weight: var(--lt-font-medium);
+    padding: var(--lm-space-2) var(--lm-space-3);
+    font-size: var(--lm-text-sm);
+    font-weight: var(--lm-font-medium);
     white-space: nowrap;
     background-color: transparent;
-    color: var(--lt-muted-foreground);
+    color: var(--lm-muted-foreground);
     border: none;
-    border-radius: calc(var(--lt-radius) - 2px);
+    border-radius: calc(var(--lm-radius) - 2px);
     cursor: pointer;
-    transition: background-color var(--lt-transition-fast), color var(--lt-transition-fast);
+    transition: background-color var(--lm-transition-fast), color var(--lm-transition-fast);
 
     &:hover {
-      color: var(--lt-foreground);
+      color: var(--lm-foreground);
     }
 
     &[aria-selected="true"] {
-      background-color: var(--lt-background);
-      color: var(--lt-foreground);
-      box-shadow: var(--lt-shadow-sm);
+      background-color: var(--lm-background);
+      color: var(--lm-foreground);
+      box-shadow: var(--lm-shadow-sm);
     }
 
     &:focus-visible {
-      outline: 2px solid var(--lt-ring);
+      outline: 2px solid var(--lm-ring);
       outline-offset: 2px;
     }
   }
 
   [role="tabpanel"] {
-    padding: var(--lt-space-4) 0;
+    padding: var(--lm-space-4) 0;
 
     &:focus-visible {
       outline: none;

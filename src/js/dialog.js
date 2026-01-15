@@ -1,9 +1,9 @@
 /**
- * LongTerm UI - Dialog Component
+ * lmui - Dialog Component
  * Wraps native <dialog> with trigger/close handling.
  *
  * Usage:
- * <lt-dialog>
+ * <lm-dialog>
  *   <button data-trigger>Open</button>
  *   <dialog>
  *     <header><h2>Title</h2></header>
@@ -12,10 +12,10 @@
  *       <button data-close>Close</button>
  *     </footer>
  *   </dialog>
- * </lt-dialog>
+ * </lm-dialog>
  */
 
-class LTDialog extends LTBase {
+class LMDialog extends LMBase {
   #dialog = null;
 
   static get observedAttributes() {
@@ -25,7 +25,7 @@ class LTDialog extends LTBase {
   init() {
     this.#dialog = this.$('dialog');
     if (!this.#dialog) {
-      console.warn('lt-dialog: No <dialog> element found');
+      console.warn('lm-dialog: No <dialog> element found');
       return;
     }
 
@@ -94,13 +94,13 @@ class LTDialog extends LTBase {
 
   onclose() {
     this.removeAttribute('open');
-    this.emit('lt-dialog-close');
+    this.emit('lm-dialog-close');
   }
 
   show() {
     if (this.#dialog && !this.#dialog.open) {
       this.#dialog.showModal();
-      this.emit('lt-dialog-open');
+      this.emit('lm-dialog-open');
     }
   }
 
@@ -123,4 +123,4 @@ class LTDialog extends LTBase {
   }
 }
 
-customElements.define('lt-dialog', LTDialog);
+customElements.define('lm-dialog', LMDialog);

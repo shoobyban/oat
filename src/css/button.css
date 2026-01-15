@@ -3,24 +3,24 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: var(--lt-space-2);
+    gap: var(--lm-space-2);
     height: 2.5rem;
-    padding: 0 var(--lt-space-4);
-    font-size: var(--lt-text-sm);
-    font-weight: var(--lt-font-medium);
+    padding: 0 var(--lm-space-4);
+    font-size: var(--lm-text-sm);
+    font-weight: var(--lm-font-medium);
     line-height: 1;
     white-space: nowrap;
-    background-color: var(--lt-primary);
-    color: var(--lt-primary-foreground);
-    border-radius: var(--lt-radius);
-    transition: background-color var(--lt-transition-fast), opacity var(--lt-transition-fast);
+    background-color: var(--lm-primary);
+    color: var(--lm-primary-foreground);
+    border-radius: var(--lm-radius);
+    transition: background-color var(--lm-transition-fast), opacity var(--lm-transition-fast);
 
     &:hover {
-      background-color: rgb(from var(--lt-primary) r g b / 0.9);
+      background-color: rgb(from var(--lm-primary) r g b / 0.9);
     }
 
     &:focus-visible {
-      outline: 2px solid var(--lt-ring);
+      outline: 2px solid var(--lm-ring);
       outline-offset: 2px;
     }
 
@@ -30,52 +30,52 @@
     }
 
     &.secondary {
-      background-color: var(--lt-secondary);
-      color: var(--lt-secondary-foreground);
+      background-color: var(--lm-secondary);
+      color: var(--lm-secondary-foreground);
 
       &:hover {
-        background-color: rgb(from var(--lt-secondary) r g b / 0.8);
+        background-color: rgb(from var(--lm-secondary) r g b / 0.8);
       }
     }
 
     &.outline {
       background-color: transparent;
-      color: var(--lt-foreground);
-      border: 1px solid var(--lt-border);
+      color: var(--lm-foreground);
+      border: 1px solid var(--lm-border);
 
       &:hover {
-        background-color: var(--lt-accent);
+        background-color: var(--lm-accent);
       }
     }
 
     &.ghost {
       background-color: transparent;
-      color: var(--lt-foreground);
+      color: var(--lm-foreground);
 
       &:hover {
-        background-color: var(--lt-accent);
+        background-color: var(--lm-accent);
       }
     }
 
     &.destructive {
-      background-color: var(--lt-destructive);
-      color: var(--lt-destructive-foreground);
+      background-color: var(--lm-destructive);
+      color: var(--lm-destructive-foreground);
 
       &:hover {
-        background-color: rgb(from var(--lt-destructive) r g b / 0.9);
+        background-color: rgb(from var(--lm-destructive) r g b / 0.9);
       }
     }
 
     &.sm {
       height: 2rem;
-      padding: 0 var(--lt-space-3);
-      font-size: var(--lt-text-xs);
+      padding: 0 var(--lm-space-3);
+      font-size: var(--lm-text-xs);
     }
 
     &.lg {
       height: 3rem;
-      padding: 0 var(--lt-space-6);
-      font-size: var(--lt-text-base);
+      padding: 0 var(--lm-space-6);
+      font-size: var(--lm-text-base);
     }
 
     &.icon {
@@ -101,17 +101,17 @@
       border-radius: 0;
 
       &:first-child {
-        border-top-left-radius: var(--lt-radius);
-        border-bottom-left-radius: var(--lt-radius);
+        border-top-left-radius: var(--lm-radius);
+        border-bottom-left-radius: var(--lm-radius);
       }
 
       &:last-child {
-        border-top-right-radius: var(--lt-radius);
-        border-bottom-right-radius: var(--lt-radius);
+        border-top-right-radius: var(--lm-radius);
+        border-bottom-right-radius: var(--lm-radius);
       }
 
       &:not(:last-child) {
-        border-right: 1px solid rgb(from var(--lt-primary-foreground) r g b / 0.2);
+        border-right: 1px solid rgb(from var(--lm-primary-foreground) r g b / 0.2);
       }
     }
   }

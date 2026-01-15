@@ -1,18 +1,18 @@
 @layer components {
-  lt-dropdown {
+  lm-dropdown {
     position: relative;
     display: inline-block;
   }
 
   [data-dropdown-menu], .dropdown-menu {
     position: absolute;
-    z-index: var(--lt-z-dropdown);
+    z-index: var(--lm-z-dropdown);
     min-width: 12rem;
-    padding: var(--lt-space-1);
-    background-color: var(--lt-background);
-    border: 1px solid var(--lt-border);
-    border-radius: var(--lt-radius);
-    box-shadow: var(--lt-shadow-md);
+    padding: var(--lm-space-1);
+    background-color: var(--lm-background);
+    border: 1px solid var(--lm-border);
+    border-radius: var(--lm-radius);
+    box-shadow: var(--lm-shadow-md);
 
     &[hidden] {
       display: none;
@@ -23,20 +23,20 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: var(--lt-space-2);
+    gap: var(--lm-space-2);
     width: 100%;
-    padding: var(--lt-space-2) var(--lt-space-3);
-    font-size: var(--lt-text-sm);
+    padding: var(--lm-space-2) var(--lm-space-3);
+    font-size: var(--lm-text-sm);
     text-align: left;
-    color: var(--lt-foreground);
+    color: var(--lm-foreground);
     background: none;
     border: none;
-    border-radius: var(--lt-radius-sm);
+    border-radius: var(--lm-radius-sm);
     cursor: pointer;
-    transition: background-color var(--lt-transition-fast);
+    transition: background-color var(--lm-transition-fast);
 
     &:hover, &:focus {
-      background-color: var(--lt-accent);
+      background-color: var(--lm-accent);
       outline: none;
     }
 

@@ -25,13 +25,13 @@
   .justify-center { justify-content: center; }
   .justify-between { justify-content: space-between; }
 
-  .gap-1 { gap: var(--lt-space-1); }
-  .gap-2 { gap: var(--lt-space-2); }
-  .gap-4 { gap: var(--lt-space-4); }
+  .gap-1 { gap: var(--lm-space-1); }
+  .gap-2 { gap: var(--lm-space-2); }
+  .gap-4 { gap: var(--lm-space-4); }
 
-  .mt-4 { margin-top: var(--lt-space-4); }
-  .mb-4 { margin-bottom: var(--lt-space-4); }
-  .p-4 { padding: var(--lt-space-4); }
+  .mt-4 { margin-top: var(--lm-space-4); }
+  .mb-4 { margin-bottom: var(--lm-space-4); }
+  .p-4 { padding: var(--lm-space-4); }
 
   .w-full { width: 100%; }
 }
