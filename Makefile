@@ -36,7 +36,7 @@ css:
 
 js:
 	@mkdir -p dist
-	@cat src/js/base.js src/js/dialog.js src/js/tabs.js src/js/dropdown.js src/js/toast.js src/js/tooltip.js > dist/longterm.js
+	@cat src/js/base.js src/js/tabs.js src/js/dropdown.js src/js/toast.js src/js/tooltip.js > dist/longterm.js
 	@esbuild dist/longterm.js --minify --outfile=dist/longterm.min.js
 	@cp dist/longterm.min.js docs/static/longterm.min.js
 	@echo "JS: $$(wc -c < dist/longterm.min.js | tr -d ' ') bytes (minified)"

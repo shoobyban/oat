@@ -124,3 +124,22 @@ class LMBase extends HTMLElement {
 if (typeof window !== 'undefined') {
   window.LMBase = LMBase;
 }
+
+// Polyfill for command/commandfor (Safari)
+if (!('commandForElement' in HTMLButtonElement.prototype)) {
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('[commandfor]');
+    if (!btn) return;
+
+    const target = document.getElementById(btn.getAttribute('commandfor'));
+    if (!target) return;
+
+    const command = btn.getAttribute('command') || 'toggle';
+
+    if (target instanceof HTMLDialogElement) {
+      if (command === 'show-modal') target.showModal();
+      else if (command === 'close') target.close();
+      else target.open ? target.close() : target.showModal();
+    }
+  });
+}

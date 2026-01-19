@@ -1,21 +1,18 @@
 +++
 title = "Dialog"
 weight = 70
-description = "Modal dialogs using native <dialog> with a custom WebComponent."
-
-[extra]
-webcomponent = true
+description = "Modal dialogs using native <dialog> with command/commandfor."
 +++
 
-Wrap a `<dialog>` in `<lm-dialog>`. Use `data-trigger` on the open button and `data-close` on close buttons.
+Fully semantic dynamic dialog with `<dialog>`. Use `commandfor` and `command="show-modal"` attributes on an element to open a target dialog.
 
 {% demo() %}
 ```html
-<lm-dialog>
-  <button data-trigger>Open dialog</button>
-  <dialog>
+<button commandfor="demo-dialog" command="show-modal">Open dialog</button>
+<dialog id="demo-dialog">
+  <form method="dialog">
     <header>
-      <h2>Dialog Title</h2>
+      <h3>Title</h3>
       <p>This is a dialog description.</p>
     </header>
     <div>
@@ -23,10 +20,52 @@ Wrap a `<dialog>` in `<lm-dialog>`. Use `data-trigger` on the open button and `d
       <p>Click outside or press Escape to close.</p>
     </div>
     <footer>
-      <button class="outline" data-close>Cancel</button>
-      <button data-close>Confirm</button>
+      <button type="button" commandfor="demo-dialog" command="close" class="outline">Cancel</button>
+      <button value="confirm">Confirm</button>
     </footer>
-  </dialog>
-</lm-dialog>
+  </form>
+</dialog>
 ```
 {% end %}
+
+### With form fields
+
+Forms inside dialogs work naturally. Use `command="close"` on cancel buttons to close.
+
+{% demo() %}
+```html
+<button commandfor="demo-dialog-form" command="show-modal">Open form dialog</button>
+<dialog id="demo-dialog-form">
+  <form method="dialog">
+    <header>
+      <h3>Edit form</h3>
+    </header>
+    <div>
+      <label>Name <input name="name" required></label>
+      <label>Email <input name="email" type="email"></label>
+    </div>
+    <footer>
+      <button type="button" commandfor="demo-dialog-form" command="close" class="outline">Cancel</button>
+      <button value="save">Save</button>
+    </footer>
+  </form>
+</dialog>
+```
+{% end %}
+
+### Handling return value
+
+Listen to the native `close` event to get the button value:
+
+```javascript
+const dialog = document.querySelector("#demo-dialog");
+dialog.addEventListener('close', (e) => {
+  console.log(dialog.returnValue); // "confirm"
+});
+```
+
+or use `onclose` inline:
+
+```
+<dialog id="my-dialog" onclose="console.log(this.returnValue)">
+```
