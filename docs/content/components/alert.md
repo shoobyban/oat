@@ -1,5 +1,5 @@
 +++
-title = "Alerts"
+title = "Alert"
 weight = 30
 description = "Alert messages using role=\"alert\"."
 +++

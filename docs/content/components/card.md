@@ -1,5 +1,5 @@
 +++
-title = "Cards"
+title = "Card"
 weight = 60
 description = "Card containers using the semantic <article> tag."
 +++
