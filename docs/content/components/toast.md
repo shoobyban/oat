@@ -9,8 +9,8 @@ Show toast notifications with `lm.toast(message, options?)`.
 {% demo() %}
 ```html
 <button onclick="lm.toast('Action completed successfully', 'All good', { variant: 'success' })">Success</button>
-<button onclick="lm.toast('Something went wrong', 'Oops', { variant: 'danger', placement: 'top-left' })">Danger</button>
-<button onclick="lm.toast('Please review this warning', 'Warning', { variant: 'warning', placement: 'bottom-right' })">Warning</button>
+<button onclick="lm.toast('Something went wrong', 'Oops', { variant: 'danger', placement: 'top-left' })" class="danger">Danger</button>
+<button onclick="lm.toast('Please review this warning', 'Warning', { variant: 'warning', placement: 'bottom-right' })" class="outline">Warning</button>
 <button onclick="lm.toast('New notification', 'For your attenton', { placement: 'top-center' })">Info</button>
 ```
 {% end %}
