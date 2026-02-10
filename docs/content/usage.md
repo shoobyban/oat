@@ -1,34 +1,45 @@
 +++
-title = "Usage"
+title = "Installation and usage"
 +++
-
-## Installation
 
 ### CDN
 
 Include the CSS and JS files directly in your HTML:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@knadh/oat/dist/oat.min.css">
-<script src="https://unpkg.com/@knadh/oat/dist/oat.min.js" defer></script>
+<link rel="stylesheet" href="https://unpkg.com/@knadh/oat/oat.min.css">
+<script src="https://unpkg.com/@knadh/oatat.min.js" defer></script>
 ```
+
+----------
 
 ### npm
 
 ```bash
-npm install oat-ui
+npm install @knadh/oat
 ```
 
 Then import in your project:
 
 ```js
-import 'oat-ui/dist/oat.css';
-import 'oat-ui/dist/oat.js';
+import '@knadh/oat/oat.min.css';
+import '@knadh/oat/oat.min.js';
 ```
+
+Or import individual files from `@knadh/oat/css` and `@knadh/oat/js`.
+
+----------
 
 ### Download
 
-Download the CSS and JS files from the [releases page](https://github.com/yourusername/oat-ui/releases) and include them in your project.
+Download the the CSS and JS files:
+
+```shell
+wget https://raw.githubusercontent.com/knadh/oat/refs/heads/gh-pages/oat.min.css
+wget https://raw.githubusercontent.com/knadh/oat/refs/heads/gh-pages/oat.min.js
+```
+
+Then include them in your project:
 
 ```html
 <link rel="stylesheet" href="./oat.min.css">
