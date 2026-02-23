@@ -1,7 +1,13 @@
 @layer base {
+  /* Container to get horizontal scroll on small screens. */
+  .table {
+    min-width: 320px;
+    width: 100%;
+    overflow-x: auto;
+  }
+
   table {
     border-collapse: collapse;
-    table-layout: fixed;
     width: 100%;
     font-size: var(--text-7);
   }
