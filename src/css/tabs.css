@@ -18,7 +18,7 @@
     white-space: nowrap;
     background-color: transparent;
     color: var(--foreground);
-    border: none;
+    border: 0;
     border-radius: calc(var(--radius-medium) - 2px);
     cursor: pointer;
     transition: background-color var(--transition-fast), color var(--transition-fast);

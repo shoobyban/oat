@@ -81,11 +81,11 @@
         }
 
         details {
-          border: none;
+          border: 0;
           overflow: visible;
 
           & + details { margin-top: 0; }
-          &[open] summary { border-bottom: none; }
+          &[open] summary { border-bottom: 0; }
           > ul { margin-inline-start: var(--space-4); padding: var(--space-1) 0; }
         }
 
@@ -156,7 +156,7 @@
         transform: translateX(-100%);
         opacity: 0;
         visibility: hidden;
-        border-inline-end: none;
+        border-inline-end: 0;
       }
     }
   }

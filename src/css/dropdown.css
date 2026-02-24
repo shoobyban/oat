@@ -41,7 +41,7 @@
       text-align: start;
       color: var(--foreground);
       background: none;
-      border: none;
+      border: 0;
       border-radius: var(--radius-small);
       cursor: pointer;
 

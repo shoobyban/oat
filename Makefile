@@ -29,7 +29,7 @@ dist: css js size
 
 css:
 	@mkdir -p dist
-	@cat $(CSS_FILES) > dist/oat.css
+	@cat $(CSS_FILES) | awk -f scripts/merge-layers.awk > dist/oat.css
 	@esbuild dist/oat.css --minify --outfile=dist/oat.min.css
 	@gzip -9 -k -f dist/oat.min.css
 	@cp dist/oat.min.css docs/static/oat.min.css

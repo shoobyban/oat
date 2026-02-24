@@ -17,7 +17,7 @@
   /* Top-layer elements don't inherit from body. Set explicitly. */
   body, dialog, [popover] {
     font-family: var(--font-sans);
-    font-size: var(--text-regular);
+    font-size: var(--text-6);
     line-height: var(--leading-normal);
     color: var(--foreground);
   }
@@ -71,7 +71,7 @@
   }
 
   h6 {
-    font-size: var(--text-regular);
+    font-size: var(--text-6);
     margin: var(--space-4) 0 var(--space-2);
   }
 
@@ -138,7 +138,7 @@
   }
 
   hr {
-    border: none;
+    border: 0;
     border-top: 1px solid var(--border);
     margin: var(--space-2) 0;
   }

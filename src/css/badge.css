@@ -22,28 +22,16 @@
       border: 1px solid var(--border);
     }
 
-    &.success {
-      color: var(--success);
+    &:is(.success, .warning, .danger) {
+      color: var(--_vc);
       background-color: light-dark(
-        color-mix(in srgb, var(--success) 10%, transparent),
-        color-mix(in srgb, var(--success) 30%, transparent)
+        color-mix(in srgb, var(--_vc) 10%, transparent),
+        color-mix(in srgb, var(--_vc) 30%, transparent)
       );
     }
 
-    &.warning {
-      color: var(--warning);
-      background-color: light-dark(
-        color-mix(in srgb, var(--warning) 10%, transparent),
-        color-mix(in srgb, var(--warning) 30%, transparent)
-      );
-    }
-
-    &.danger {
-      color: var(--danger);
-      background-color: light-dark(
-        color-mix(in srgb, var(--danger) 10%, transparent),
-        color-mix(in srgb, var(--danger) 30%, transparent)
-      );
-    }
+    &.success { --_vc: var(--success); }
+    &.warning { --_vc: var(--warning); }
+    &.danger  { --_vc: var(--danger); }
   }
 }
